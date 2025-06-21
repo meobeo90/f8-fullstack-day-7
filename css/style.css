@@ -288,6 +288,34 @@ h3 {
 .single-course .image {
   overflow: hidden;
   width: 100%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.no2 .image::before,
+.no5 .image::before,
+.no8 .image::before {
+  content: "";
+  width: 140px;
+  height: 109px;
+  background-color: #b80257;
+  z-index: 2;
+  position: absolute;
+  rotate: 35deg;
+  top: -74px;
+  right: -60px;
+}
+
+.no2 .image i,
+.no5 .image i,
+.no8 .image i {
+  display: inline-block;
+  position: absolute;
+  z-index: 15;
+  color: #fff;
+  top: 10px;
+  right: 15px;
+  rotate: 35deg;
 }
 .single-course .image img {
   object-fit: cover;
@@ -356,7 +384,6 @@ h3 {
   display: flex;
   justify-content: center;
   border: 1 solid rgba(0, 0, 0, 0.05);
-
   border-radius: 999px;
 }
 
@@ -365,6 +392,7 @@ h3 {
   align-self: center;
   color: #fff;
   text-transform: uppercase;
+  position: relative;
 }
 
 .no1 .clearfix li:nth-child(3),
@@ -395,6 +423,28 @@ h3 {
 .no8 .clearfix li:nth-child(3) a,
 .no9 .clearfix li:nth-child(3) a {
   font-weight: 700;
+}
+
+.clearfix li:nth-child(3):hover::before {
+  content: "";
+  width: 100%;
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+  top: 110%;
+  left: 0;
+  height: 10px;
+  right: 5%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  transition: all;
+}
+
+.clearfix li:nth-child(3):hover {
+  transform: translateY(-10px);
 }
 
 .course-pagination {
@@ -499,10 +549,48 @@ h3 {
   font-weight: 400;
   color: #fff;
   font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.subscribe .mail button::after {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  scale: 0;
+  background-color: #fff;
   transition: all 0.5s ease;
 }
+.subscribe .mail button:hover::after {
+  scale: 1;
+}
 
-.subscribe .mail button:hover {
+.subscribe .mail button:hover span {
   color: #b80257;
-  background: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.footer .scroll {
+  background-color: #b80257;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .arrow {
+  width: 12px;
+  height: 12px;
+  border: 2px solid;
+  rotate: 45deg;
+  border-color: #fff transparent transparent #fff;
+  display: block;
+  margin-top: 8px;
 }
