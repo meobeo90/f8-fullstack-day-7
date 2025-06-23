@@ -112,13 +112,63 @@ h6 {
 
 .user-actions {
   display: flex;
+  position: relative;
+  align-items: center;
 }
 
-.user-actions .action-btn {
+.user-actions .action-btn,
+.search-btn .search-parent {
   padding: 14px;
   color: #fff;
+  cursor: pointer;
+}
+.user-actions .action-btn .search-btn {
+  position: relative;
+  z-index: 1;
+}
+.search-btn .search-form {
+  display: flex;
+  position: absolute;
+  right: -5px;
+  top: 45px;
+  height: 55px;
+  width: 280px;
+  padding: 5px;
+  font-size: 1.5rem;
+  z-index: 1;
+  display: none;
+}
+.search-btn > .checkbox-search {
+  display: none;
+}
+.search-btn > .checkbox-search:checked ~ .search-form {
+  display: block;
 }
 
+.search-btn .search-form > button {
+  position: absolute;
+  background-color: #b80257;
+  line-height: 1.5;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  top: 4px;
+  right: 5px;
+  z-index: 2;
+  display: block;
+}
+.search-btn .search-form > input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  border: 1px solid #ececec;
+  padding: 0 49px 0 10px;
+  outline: 5px solid #fff;
+}
+.search-btn .search-form > button > .search-child {
+  color: #fff;
+  font-size: 1.4rem;
+}
 .hero {
   flex-grow: 1;
   display: flex;

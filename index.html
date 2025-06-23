@@ -203,9 +203,23 @@
               <!-- End .nav -->
               <!-- User actions -->
               <div class="user-actions">
-                <button class="action-btn">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <label class="search-btn">
+                  <i class="fa-solid fa-magnifying-glass search-parent"></i>
+                  <input type="checkbox" class="checkbox-search" />
+                  <form action="" class="search-form">
+                    <input
+                      type="text"
+                      name="search"
+                      placeholder="Search..."
+                      spellcheck="true"
+                      class="seach-input"
+                      autocomplete="off"
+                    />
+                    <button>
+                      <i class="fa-solid fa-magnifying-glass search-child"></i>
+                    </button>
+                  </form>
+                </label>
                 <button class="action-btn">
                   <i class="fa-solid fa-cart-shopping"></i>
                 </button>
