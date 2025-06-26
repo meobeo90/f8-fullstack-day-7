@@ -453,6 +453,7 @@ h3 {
   justify-content: center;
   border: 1 solid rgba(0, 0, 0, 0.05);
   border-radius: 999px;
+  cursor: pointer;
 }
 
 .single-course .clearfix li:nth-child(3) a {
