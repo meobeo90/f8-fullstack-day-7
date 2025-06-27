@@ -200,6 +200,9 @@ h6 {
   padding: 0 5px;
 }
 
+.breadcrumbs a {
+  transition: color 0.3s ease-in-out;
+}
 .breadcrumbs a:hover {
   color: #783df0;
 }
@@ -358,6 +361,7 @@ h3 {
   width: 100%;
   position: relative;
   transition: all 0.5s ease;
+  display: flex;
 }
 
 .no2 .image::before,
@@ -394,6 +398,7 @@ h3 {
 
 .single-course:hover .image img {
   scale: 1.1;
+  opacity: 0.8;
 }
 
 .single-course .text {
@@ -404,6 +409,7 @@ h3 {
   font-size: 1.8rem;
   width: 100%;
   line-height: 1.5;
+  transition: color 0.3s ease-in-out;
 }
 
 .single-course:hover .text h2 {
@@ -533,6 +539,8 @@ h3 {
   color: rgba(0, 0, 0, 0.2);
   font-weight: 600;
   margin-right: 10px;
+  transition: color 0.3s ease-in-out, border-color 0.4s ease-in-out;
+  cursor: pointer;
 }
 .course-pagination li:nth-child(1),
 .course-pagination li:nth-child(2):hover,
@@ -585,7 +593,9 @@ h3 {
   font-size: 2rem;
   color: #fff;
 }
-
+.footer .footer-list a {
+  transition: color 0.3s ease-in-out;
+}
 .footer .footer-list a:hover {
   color: #b80257;
 }
